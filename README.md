@@ -24,6 +24,9 @@ A triple i, j, k means that <img src="https://render.githubusercontent.com/rende
 * `S` is a comma-separated sequence of states.
 * For example, the DFA for which the state diagram appears below may have the following
 string representation: `0,0,1;1,2,1;2,0,3;3,3,3#1,3`
+
+![DFA](https://github.com/maggieezzat/Automaton-Theory/blob/master/DFA_Python/dfa%20diagram.PNG)
+
 * `run` simulates the operation of the constructed DFA on a given binary string. It returns `true` if the string is accepted by the DFA and `false` otherwise.
 
 
@@ -45,6 +48,7 @@ An object DFA is implemented, where:
 * `Z`, `O`, and `E` are semicolon-separated sequences of pairs of states. Each pair is a comma-separated sequence of two states. A pair i, j represents a transition from state i to state j. For Z this means that <img src="https://render.githubusercontent.com/render/math?math=\delta">(i, 0) = j, similarly for O and E.
 * `F` is a comma-separated sequence of states.
 * For example, the NFA for which the state diagram appears below may have the following string representation: `0,0;1,2;3,3#0,0;0,1;2,3;3,3#1,2#3`
+![NFA](https://github.com/maggieezzat/Automaton-Theory/blob/master/NFA/nfa.PNG)
 * `run` simulates the operation of the constructed DFA on a given binary string. It returns `true` if the string is accepted by the DFA and `false` otherwise.
 
 
