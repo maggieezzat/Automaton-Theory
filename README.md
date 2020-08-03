@@ -25,3 +25,14 @@ A triple i, j, k means that <img src="https://render.githubusercontent.com/rende
 * For example, the DFA for which the state diagram appears below may have the following
 string representation: `0,0,1;1,2,1;2,0,3;3,3,3#1,3`
 * `run` simulates the operation of the constructed DFA on a given binary string. It returns true if the string is accepted by the DFA and false otherwise.
+
+
+# NFA
+
+* An implementation of the classical algorithm for constructing a deterministic finite automaton (DFA) equivalent to a non-deterministic finite automaton (NFA).
+* an NFA is a quintuple  ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">):
+  * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
+  * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
+  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times {\Sigma \cup \epsilon} "> &#8594; <img src="https://render.githubusercontent.com/render/math?math=P(Q)"> is the transition function.
+  * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
+  * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
