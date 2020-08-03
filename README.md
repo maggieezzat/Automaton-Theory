@@ -24,15 +24,25 @@ A triple i, j, k means that <img src="https://render.githubusercontent.com/rende
 * `S` is a comma-separated sequence of states.
 * For example, the DFA for which the state diagram appears below may have the following
 string representation: `0,0,1;1,2,1;2,0,3;3,3,3#1,3`
-* `run` simulates the operation of the constructed DFA on a given binary string. It returns true if the string is accepted by the DFA and false otherwise.
+* `run` simulates the operation of the constructed DFA on a given binary string. It returns `true` if the string is accepted by the DFA and `false` otherwise.
 
 
 # NFA
 
 * An implementation of the classical algorithm for constructing a deterministic finite automaton (DFA) equivalent to a non-deterministic finite automaton (NFA).
-* an NFA is a quintuple  ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">):
+* A NFA is a quintuple  ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">):
   * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
   * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
   * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times {\Sigma \cup \epsilon} "> &#8594; <img src="https://render.githubusercontent.com/render/math?math=P(Q)"> is the transition function.
   * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
   * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
+* Given a description of an NFA, we will construct an equivalent DFA.
+* Same assumptions followed in DFA will hold in NFA
+
+An object DFA is implemented, where:
+* DFA is created by calling the function `decode_NFA` which takes one parameter that is a string description of a NFA and returns a DFA instance.
+* A string describing an NFA is of the form `Z#O#E#F`, where `Z`, `O`, and `E`, respectively, represent the 0-transitions, the 1-transitions, and the <img src="https://render.githubusercontent.com/render/math?math=\epsilon">-transitions. `F` represents the set of accept state.
+* `Z`, `O`, and `E` are semicolon-separated sequences of pairs of states. Each pair is a comma-separated sequence of two states. A pair i, j represents a transition from state i to state j. For Z this means that <img src="https://render.githubusercontent.com/render/math?math=\delta">(i, 0) = j, similarly for O and E.
+* `F` is a comma-separated sequence of states.
+* For example, the NFA for which the state diagram appears below may have the following string representation: `0,0;1,2;3,3#0,0;0,1;2,3;3,3#1,2#3`
+* `run` simulates the operation of the constructed DFA on a given binary string. It returns `true` if the string is accepted by the DFA and `false` otherwise.
