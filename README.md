@@ -68,6 +68,6 @@ An object FDFA is implemented, where:
 * For example, consider the FDFA for which the state diagram appears below. Suppose
 that, for state i, A(i) is the two-bit binary representation of i. Thus, such an FDFA may have the following string representation: `0,0,1,00;1,2,1,01;2,0,3,10;3,3,3,11#0,1,2`
 
-![FDFA](https://drive.google.com/file/d/1hOMw_v1nLoV7cagoyufv0q-F7dEGRKwX/view?usp=sharing)
+![FDFA](https://github.com/maggieezzat/DFA/blob/master/FDFA/fdfa.PNG)
 
 * `run` simulates the operation of the constructed FDFA on a given binary string. For example, running the above FDFA on the string `1011100` produces the output `1000`.
