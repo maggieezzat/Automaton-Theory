@@ -96,9 +96,9 @@ A function `LRE` is implemented, which:
 * A string encoding a CFG is a semi-colon separated sequence of items. Each item represents a largest set of rules with the same left-hand side and is a comma-separated sequence of strings. The first string of each item is a member of <img src="https://render.githubusercontent.com/render/math?math=V">, representing the common left-hand side. The first string of the first item is <img src="https://render.githubusercontent.com/render/math?math=S">.
 * For example, consider the CFG ({S,T,L}, {i,a,b,c,d}, R, S), where R is given by the
 following productions:
-S &#8594; ScT | T
-T &#8594; aSb | iaLb | i
-L &#8594; SdL | S
+S &#8594; ScT | T      
+T &#8594; aSb | iaLb | i      
+L &#8594; SdL | S     
 This CFG will have the following string encoding: `S,ScT,T;T,aSb,iaLb,i;L,SdL,S`
 
 * The function `LRE` will assume the ordering of variables as they appear in the string encoding of the CFG. Thus, in the above example, the variables are ordered thus: `S, T, L`.
