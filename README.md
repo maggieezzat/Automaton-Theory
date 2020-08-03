@@ -90,3 +90,17 @@ We make the following assumptions for simplicity:
 2. The start variable is the symbol <img src="https://render.githubusercontent.com/render/math?math=S">.
 3. The set <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> of terminals consists of lower-case English symbols.
 4. We only consider CFGs with no cycles and no <img src="https://render.githubusercontent.com/render/math?math=\epsilon">-rules.
+
+A function `LRE` is implemented, which:
+* takes an input string encoding a CFG and returns a string encoding an equivalent CFG which is not left-recursive.
+* A string encoding a CFG is a semi-colon separated sequence of items. Each item represents a largest set of rules with the same left-hand side and is a comma-separated sequence of strings. The first string of each item is a member of <img src="https://render.githubusercontent.com/render/math?math=V">, representing the common left-hand side. The first string of the first item is <img src="https://render.githubusercontent.com/render/math?math=S">.
+* For example, consider the CFG (fS; T;Lg; fi; a; b; c; dg;R; S), where R is given by the
+following productions.
+S ¡! S c T j T
+T ¡! a S b j i a L b j i
+L ¡! S d L j S
+This CFG will have the following string encoding.
+S; ScT; T; T; aSb; iaLb; i; L; SdL; S
+
+* The function `LRE` will assume the ordering of variables as they appear in the string encoding of the CFG. Thus, in the above example, the variables are ordered thus: `S, T, L`.
+* `LRE` returns a string encoding the resulting CFG where a newly-introduced variable, for the elimination of immediate left-recursion for variable `A`, is the string `A'`. Thus, for the above example, the output should be as follows: `S,TS';S',cTS',;T,aSb,iaLb,i;L,aSbS'dL,iaLbS'dL,iS'dL,aSbS',iaLbS',iS'`
