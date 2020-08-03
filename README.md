@@ -1,5 +1,4 @@
 # DFA
-# DFA
 * A basic Implementation of a Deterministic Finite State Automaton (DFA)
 * A DFA is a quintuple ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">): 
   * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
@@ -7,14 +6,14 @@
   * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma \in Q"> is the transition function.
   * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
   * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
-* A DFA accepts a string $$w = w_1 w_2 ··· w_n \in \Sigma *$$ if there is a sequence $$r_0, r_1, ... , r_n$$ of states such that 
-  *  <img src="https://render.githubusercontent.com/render/math?math=r_0 = q_0">
-  *  <img src="https://render.githubusercontent.com/render/math?math=r_n \in F">
-  *  $$ \Delta(r_i,w_{i+1}) = r_{i+1}, for every 0 <= i < n$$
+* A DFA accepts a string <img src="https://render.githubusercontent.com/render/math?math=w = w_1 w_2 ... w_n \in \Sigma^*"> if there is a sequence <img src="https://render.githubusercontent.com/render/math?math=r_0, r_1, ..., r_n"> of states such that 
+  * <img src="https://render.githubusercontent.com/render/math?math=r_0 = q_0">
+  * <img src="https://render.githubusercontent.com/render/math?math=r_n \in F">
+  * <img src="https://render.githubusercontent.com/render/math?math= \delta(r_i,w_{i+1}) = r_{i+1}"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
 
 We make the following assumptions for simplicity.
-a. The alphabet § is always the binary alphabet {0, 1}.
-b. The set of states Q is always of the form {0, . . . , n}, for some n 2 N.
+a. The alphabet <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is always the binary alphabet <img src="https://render.githubusercontent.com/render/math?math={0,1}">.
+b. The set of states <img src="https://render.githubusercontent.com/render/math?math=Q"> is always of the form The set of states <img src="https://render.githubusercontent.com/render/math?math={0, . . . , n}">, for some <img src="https://render.githubusercontent.com/render/math?math=n \in N">.
 c. The start state is always state 0.
 
 An object DFA is implemented, where:
