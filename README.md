@@ -58,3 +58,16 @@ An object DFA is implemented, where:
   * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
   * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
   * <img src="https://render.githubusercontent.com/render/math?math=A"> is function that maps every state in Q to an action. 
+* Same assumptions followed in DFA will hold in FDFA
+
+An object FDFA is implemented, where:
+* FDFA is created by calling the function `construct_fdfa` which takes one parameter that is a string description of a FDFA and returns a FDFA instance.
+* A string describing an FDFA is of the form `P#S`, where `P` is a prefix representing both the transition function <img src="https://render.githubusercontent.com/render/math?math=\delta"> and the action function <img src="https://render.githubusercontent.com/render/math?math=A"> and `S` is a suffix representing the set <img src="https://render.githubusercontent.com/render/math?math=F"> of accept state.
+* `P` is a semicolon-separated sequence of quadruples. Each quadruple is a comma-separated sequence of items: the first three items are states and the fourth is a binary string. A quadruple i, j, k, s means that <img src="https://render.githubusercontent.com/render/math?math=\delta">(i, 0) = j, <img src="https://render.githubusercontent.com/render/math?math=\delta">(i, 1) = k, and <img src="https://render.githubusercontent.com/render/math?math=A">(i) = s.
+* `S` is a comma-separated sequence of states.
+* For example, consider the FDFA for which the state diagram appears below. Suppose
+that, for state i, A(i) is the two-bit binary representation of i. Thus, such an FDFA may have the following string representation: `0,0,1,00;1,2,1,01;2,0,3,10;3,3,3,11#0,1,2`
+
+![FDFA](https://drive.google.com/file/d/1hOMw_v1nLoV7cagoyufv0q-F7dEGRKwX/view?usp=sharing)
+
+* `run` simulates the operation of the constructed FDFA on a given binary string. For example, running the above FDFA on the string `1011100` produces the output `1000`.
