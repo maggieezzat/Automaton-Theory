@@ -9,7 +9,7 @@
 * A DFA accepts a string <img src="https://render.githubusercontent.com/render/math?math=w = w_1 w_2 ... w_n \in \Sigma^*"> if there is a sequence <img src="https://render.githubusercontent.com/render/math?math=r_0, r_1, ..., r_n"> of states such that 
   * <img src="https://render.githubusercontent.com/render/math?math=r_0 = q_0">
   * <img src="https://render.githubusercontent.com/render/math?math=r_n \in F">
-  * <img src="https://render.githubusercontent.com/render/math?math= \delta (r_i,w_{i+1}) = r_{i+1}"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
+  * <img src="https://render.githubusercontent.com/render/math?math= \delta "> <img src="https://render.githubusercontent.com/render/math?math= (r_i,w_{i+1}) = r_{i+1}"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
 
 We make the following assumptions for simplicity.
 1. The alphabet <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is always the binary alphabet {0,1}
@@ -20,7 +20,7 @@ An object DFA is implemented, where:
 * DFA is created by calling the function `construct_DFA` which takes one parameter that is a string description of a DFA and returns a DFA instance.
 * A string describing a DFA is of the form `P#S`, where `P` is a prefix representing the transition function <img src="https://render.githubusercontent.com/render/math?math=\delta"> and `S` is a suffix representing the set <img src="https://render.githubusercontent.com/render/math?math=F">) of accept state.
 * `P` is a semicolon-separated sequence of triples of states: each triple is a comma-separated sequence of states. 
-A triple i, j, k means that <img src="https://render.githubusercontent.com/render/math?math=\delta (i,0) = j"> and <img src="https://render.githubusercontent.com/render/math?math=\delta (i,1) = k">
+A triple i, j, k means that <img src="https://render.githubusercontent.com/render/math?math=\delta"> (i,0) = j and <img src="https://render.githubusercontent.com/render/math?math=\delta">  (i,1) = k
 * `S` is a comma-separated sequence of states.
 * For example, the DFA for which the state diagram appears below may have the following
 string representation: `0,0,1;1,2,1;2,0,3;3,3,3#1,3`
