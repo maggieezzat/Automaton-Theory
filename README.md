@@ -75,3 +75,18 @@ that, for state i, A(i) is the two-bit binary representation of i. Thus, such an
 ![FDFA](https://github.com/maggieezzat/DFA/blob/master/FDFA/fdfa.PNG)
 
 * `run` simulates the operation of the constructed FDFA on a given binary string. For example, running the above FDFA on the string `1011100` produces the output `1000`.
+
+# CFG Left Recursion Elimination
+
+* An implementation of the Context Free Grammar (CFG) Left Recursion Elimination Algorithm.
+* a CFG is a quadruple (<img src="https://render.githubusercontent.com/render/math?math=V">; <img src="https://render.githubusercontent.com/render/math?math=\Sigma">; <img src="https://render.githubusercontent.com/render/math?math=R">; <img src="https://render.githubusercontent.com/render/math?math=S">)
+where:
+ * <img src="https://render.githubusercontent.com/render/math?math=V"> and <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> are disjoint alphabets (respectively, containing variables and terminals).
+ * <img src="https://render.githubusercontent.com/render/math?math=R \subset V \times (V \cup \Sigma)^*"> is a set of rules.
+ * <img src="https://render.githubusercontent.com/render/math?math=S \in V"> is the start variable.
+
+We make the following assumptions for simplicity:
+1. The set <img src="https://render.githubusercontent.com/render/math?math=V"> of variables consists of upper-case English symbols.
+2. The start variable is the symbol <img src="https://render.githubusercontent.com/render/math?math=S">.
+3. The set <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> of terminals consists of lower-case English symbols.
+4. We only consider CFGs with no cycles and no <img src="https://render.githubusercontent.com/render/math?math=\epsilon">-rules.
