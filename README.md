@@ -20,7 +20,7 @@ An object DFA is implemented, where:
 * DFA is created by calling the function `construct_DFA` which takes one parameter that is a string description of a DFA and returns a DFA instance.
 * A string describing a DFA is of the form `P#S`, where `P` is a prefix representing the transition function <img src="https://render.githubusercontent.com/render/math?math=\delta"> and `S` is a suffix representing the set <img src="https://render.githubusercontent.com/render/math?math=F">) of accept state.
 * `P` is a semicolon-separated sequence of triples of states: each triple is a comma-separated sequence of states. 
-A triple i, j, k means that <img src="https://render.githubusercontent.com/render/math?math=\delta" (i,0) = j> and <img src="https://render.githubusercontent.com/render/math?math=\delta" (i,1) = k>
+A triple i, j, k means that <img src="https://render.githubusercontent.com/render/math?math=\delta (i,0) = j"> and <img src="https://render.githubusercontent.com/render/math?math=\delta (i,1) = k">
 * `S` is a comma-separated sequence of states.
 * For example, the DFA for which the state diagram appears below may have the following
 string representation: `0,0,1;1,2,1;2,0,3;3,3,3#1,3`
