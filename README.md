@@ -79,11 +79,11 @@ that, for state i, A(i) is the two-bit binary representation of i. Thus, such an
 # CFG Left Recursion Elimination
 
 * An implementation of the Context Free Grammar (CFG) Left Recursion Elimination Algorithm.
-* a CFG is a quadruple (<img src="https://render.githubusercontent.com/render/math?math=V">; <img src="https://render.githubusercontent.com/render/math?math=\Sigma">; <img src="https://render.githubusercontent.com/render/math?math=R">; <img src="https://render.githubusercontent.com/render/math?math=S">)
+* a CFG is a quadruple (<img src="https://render.githubusercontent.com/render/math?math=V">, <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=R">, <img src="https://render.githubusercontent.com/render/math?math=S">)
 where:
- * <img src="https://render.githubusercontent.com/render/math?math=V"> and <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> are disjoint alphabets (respectively, containing variables and terminals).
- * <img src="https://render.githubusercontent.com/render/math?math=R \subset V \times (V \cup \Sigma)^*"> is a set of rules.
- * <img src="https://render.githubusercontent.com/render/math?math=S \in V"> is the start variable.
+  * <img src="https://render.githubusercontent.com/render/math?math=V"> and <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> are disjoint alphabets (respectively, containing variables and terminals).
+  * <img src="https://render.githubusercontent.com/render/math?math=R \subset V \times (V \cup \Sigma)^*"> is a set of rules.
+  * <img src="https://render.githubusercontent.com/render/math?math=S \in V"> is the start variable.
 
 We make the following assumptions for simplicity:
 1. The set <img src="https://render.githubusercontent.com/render/math?math=V"> of variables consists of upper-case English symbols.
