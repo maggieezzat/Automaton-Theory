@@ -3,6 +3,7 @@
 * A basic Implementation of a Deterministic Finite State Automaton (DFA)
 * A DFA is a quintuple ( $Q$ , $$\Sigma$$, $$\Delta$$, $$q0$$, $$F$$): 
   * $$Q$$ is a non-empty, finite set of states. 
+  * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
   * $$\Sigma$$ is non-empty, finite set of symbols (an alphabet).
   *  $$\Delta : Q \times \Sigma \in Q$$ is the transition function.
   *  $$q_0 \in Q$$ is the start state.
