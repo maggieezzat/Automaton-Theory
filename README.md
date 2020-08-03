@@ -1,16 +1,15 @@
 # DFA
 # DFA
 * A basic Implementation of a Deterministic Finite State Automaton (DFA)
-* A DFA is a quintuple ( $Q$ , $$\Sigma$$, $$\Delta$$, $$q0$$, $$F$$): 
-  * $$Q$$ is a non-empty, finite set of states. 
+* A DFA is a quintuple ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">): 
+  * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
   * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
-  * <img src="https://render.githubusercontent.com/render/math?math=\Delta : Q \times \Sigma \in Q"> is the transition function.
-  *  $$\Delta : Q \times \Sigma \in Q$$ is the transition function.
-  *  $$q_0 \in Q$$ is the start state.
-  *  $$F \in Q$$ is the set of accept states. 
+  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma \in Q"> is the transition function.
+  * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
+  * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
 * A DFA accepts a string $$w = w_1 w_2 ··· w_n \in \Sigma *$$ if there is a sequence $$r_0, r_1, ... , r_n$$ of states such that 
-  *  $$r_0 = q_0$$ 
-  *  $$r_n \in F$$ 
+  *  <img src="https://render.githubusercontent.com/render/math?math=r_0 = q_0">
+  *  <img src="https://render.githubusercontent.com/render/math?math=r_n \in F">
   *  $$ \Delta(r_i,w_{i+1}) = r_{i+1}, for every 0 <= i < n$$
 
 We make the following assumptions for simplicity.
