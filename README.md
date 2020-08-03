@@ -46,3 +46,15 @@ An object DFA is implemented, where:
 * `F` is a comma-separated sequence of states.
 * For example, the NFA for which the state diagram appears below may have the following string representation: `0,0;1,2;3,3#0,0;0,1;2,3;3,3#1,2#3`
 * `run` simulates the operation of the constructed DFA on a given binary string. It returns `true` if the string is accepted by the DFA and `false` otherwise.
+
+
+# FDFA
+
+* An implementation of a fallback deterministic finite automaton with actions (FDFA) abstract data type. 
+* A FDFA is a sextuple  ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">, <img src="https://render.githubusercontent.com/render/math?math=A">): 
+  * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
+  * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
+  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma \in Q"> is the transition function.
+  * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
+  * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
+  * <img src="https://render.githubusercontent.com/render/math?math=A"> is function that maps every state in Q to an action. 
