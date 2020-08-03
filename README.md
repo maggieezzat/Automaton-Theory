@@ -12,9 +12,9 @@
   * <img src="https://render.githubusercontent.com/render/math?math= \delta(r_i,w_{i+1}) = r_{i+1}"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
 
 We make the following assumptions for simplicity.
-a. The alphabet <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is always the binary alphabet <img src="https://render.githubusercontent.com/render/math?math={0,1}">.
-b. The set of states <img src="https://render.githubusercontent.com/render/math?math=Q"> is always of the form The set of states <img src="https://render.githubusercontent.com/render/math?math={0, . . . , n}">, for some <img src="https://render.githubusercontent.com/render/math?math=n \in N">.
-c. The start state is always state 0.
+1. The alphabet <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is always the binary alphabet {0,1}
+2. The set of states <img src="https://render.githubusercontent.com/render/math?math=Q"> is always of the form The set of states {0, . . . , n}, for some <img src="https://render.githubusercontent.com/render/math?math=n \in N">.
+3. The start state is always state 0.
 
 An object DFA is implemented, where:
 * DFA is created by calling the function `construct_DFA` which takes one parameter that is a string description of a DFA and returns a DFA instance.
