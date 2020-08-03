@@ -9,7 +9,7 @@
 * A DFA accepts a string <img src="https://render.githubusercontent.com/render/math?math=w = w_1 w_2 ... w_n \in \Sigma^*"> if there is a sequence <img src="https://render.githubusercontent.com/render/math?math=r_0, r_1, ..., r_n"> of states such that 
   * <img src="https://render.githubusercontent.com/render/math?math=r_0 = q_0">
   * <img src="https://render.githubusercontent.com/render/math?math=r_n \in F">
-  *  <img src="https://render.githubusercontent.com/render/math?math=\delta"> <img src="https://render.githubusercontent.com/render/math?math=(r_i,w_{i+1}) = r_i+1"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
+  *  <img src="https://render.githubusercontent.com/render/math?math=\delta"> (r<sub>i</sub>,w<sub>i+1</sub>) = r<sub>i+1</sub>"> for every <img src="https://render.githubusercontent.com/render/math?math=0 <= i < n">
 
 We make the following assumptions for simplicity.
 1. The alphabet <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is always the binary alphabet {0,1}
