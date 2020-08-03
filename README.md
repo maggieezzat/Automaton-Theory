@@ -3,7 +3,7 @@
 * A DFA is a quintuple ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">): 
   * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
   * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
-  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma \in Q"> is the transition function.
+  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma"> &#8594; <img src="https://render.githubusercontent.com/render/math?math=Q"> is the transition function.
   * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
   * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
 * A DFA accepts a string <img src="https://render.githubusercontent.com/render/math?math=w = w_1 w_2 ... w_n \in \Sigma^*"> if there is a sequence <img src="https://render.githubusercontent.com/render/math?math=r_0, r_1, ..., r_n"> of states such that 
@@ -54,7 +54,7 @@ An object DFA is implemented, where:
 * A FDFA is a sextuple  ( <img src="https://render.githubusercontent.com/render/math?math=Q"> , <img src="https://render.githubusercontent.com/render/math?math=\Sigma">, <img src="https://render.githubusercontent.com/render/math?math=\delta">, <img src="https://render.githubusercontent.com/render/math?math=q_0">, <img src="https://render.githubusercontent.com/render/math?math=F">, <img src="https://render.githubusercontent.com/render/math?math=A">): 
   * <img src="https://render.githubusercontent.com/render/math?math=Q"> is a non-empty, finite set of states. 
   * <img src="https://render.githubusercontent.com/render/math?math=\Sigma"> is non-empty, finite set of symbols (an alphabet).
-  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma \in Q"> is the transition function.
+  * <img src="https://render.githubusercontent.com/render/math?math=\delta : Q \times \Sigma"> &#8594; <img src="https://render.githubusercontent.com/render/math?math=Q"> is the transition function.
   * <img src="https://render.githubusercontent.com/render/math?math=q_0 \in Q"> is the start state.
   * <img src="https://render.githubusercontent.com/render/math?math=F \in Q"> is the set of accept states. 
   * <img src="https://render.githubusercontent.com/render/math?math=A"> is function that maps every state in Q to an action. 
